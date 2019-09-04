@@ -32,7 +32,7 @@ const contractCode = `
 
 
 // const contractAddress = 'ct_7W4TBmvpHMpmp95stctgmBQoL9kqh6eLQUZNYRt7uHyiGdKUD';
-const contractAddress = 'ct_2eR5n4XPJb7rHSgQaS5QfAoL98Q6ATsNSbkefZenoZ3j7QLbpG';
+const contractAddress = 'ct_2VZeyiXtgLv3zGih9sGEnQMtzojRgcg9WYZtK4VQx7NfzBG2TA';
 
 
 var client = null;
