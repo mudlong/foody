@@ -82,8 +82,7 @@ async function callStatic(func, args) {
       price: foody.foodPrice,
       desc: foody.foodDesc,
     })
-  console.log(pics)
-  console.log(desc)
+  
   }
 
      renderFoods(); 
