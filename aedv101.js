@@ -22,9 +22,9 @@ const contractCode = `
         
       entrypoint getFoodslength() : int =
         state.foodslength
-        
-      stateful entrypoint uploadFood(name' : string, foodpics' : string, foodDesc' : string) =
-        let foods = { conAddress = Call.caller, name = name', foodpics = foodpics', foodPrice = 0, foodDesc = foodDesc'}
+              
+      stateful entrypoint uploadFood(name' : string, foodpics' : string, foodDesc' : string, foodPrice' : int) =
+        let foods = { conAddress = Call.caller, name = name', foodpics = foodpics', foodPrice = foodPrice', foodDesc = foodDesc'}
         let index = getFoodslength() + 1
         put(state {food[index] = foods, foodslength = index })
 
