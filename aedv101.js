@@ -53,7 +53,7 @@ function renderFoods(){
 
 async function callStatic(func, args) {
   //Create a new contract instance that we can interact with
-  const contract = await client.getContractInstance(contractSource, {contractAddress});
+  const contract = await client.getContractInstance(contractCode, {contractAddress});
   //Make a call to get data of smart contract func, with specefied arguments
   console.log('args', args);
   console.log('func', func);
