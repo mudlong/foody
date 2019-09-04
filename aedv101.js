@@ -73,7 +73,7 @@ async function callStatic(func, args) {
 
   foodsLength = await callStatic('getFoodslength', []); 
 
-  for (let i = 1; i <=foodslength; i++) {
+  for (let i = 1; i <= foodsLength; i++) {
 
 //call the blockchain to get saved data
   const now = await callStatic('getfoody', [i]);
