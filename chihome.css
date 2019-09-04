@@ -122,6 +122,8 @@ h5:hover{
     height: auto ;
     width:95%;
     max-height: auto;
+    overflow-y: auto;
+    scroll-behavior: auto;
     background-color: rgba(22,10,100,0.5);
     border-radius: 8px;  
 
@@ -406,6 +408,8 @@ h5{
 
 .pkc{
 	width:95%;
+	overflow-y:auto;
+	height: 80vh;
 }
 
 }
