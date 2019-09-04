@@ -70,7 +70,7 @@ async function callStatic(func, args) {
   client = await Ae.Aepp();
 
   foodsLength = await callStatic('getFoodslength', []); 
-  console.log(foodslength)
+  console.log(foodsLength)
 
   for (let i = 1; i <= foodsLength; i++) {
 
