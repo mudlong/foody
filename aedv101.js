@@ -38,9 +38,7 @@ const contractAddress = 'ct_2eR5n4XPJb7rHSgQaS5QfAoL98Q6ATsNSbkefZenoZ3j7QLbpG';
 var client = null;
 var foodsLength = 0;
 
-var foodArray = [
-
- ];
+var foodArray = [];
   
 
 function renderFoods(){
@@ -72,11 +70,12 @@ async function callStatic(func, args) {
   client = await Ae.Aepp();
 
   foodsLength = await callStatic('getFoodslength', []); 
+  console.log(foodslength)
 
   for (let i = 1; i <= foodsLength; i++) {
 
-//call the blockchain to get saved data
-  const now = await callStatic('getfoody', [i]);
+//call to the blockchain to get saved data
+  const foody = await callStatic('getfoody', [i]);
 
 //Display our foods from  blockchain
     foodArray.push({
