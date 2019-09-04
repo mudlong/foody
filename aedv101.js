@@ -83,6 +83,8 @@ async function callStatic(func, args) {
       desc: foody.foodDesc,
     })
   }
+  console.log(foodPics)
+  console.log(desc)
 
      renderFoods(); 
   $("#loader").hide();
