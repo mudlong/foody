@@ -78,9 +78,9 @@ async function callStatic(func, args) {
 //Display our foods from  blockchain
     foodArray.push({
       // name: foody.name,
-      pics: foody.foodpics,
-      price: foody.foodPrice,
-      desc: foody.foodDesc,
+      foodpics: foody.foodpics,
+      foodPrice: foody.foodPrice,
+      foodDesc: foody.foodDesc,
     })
   
   }
