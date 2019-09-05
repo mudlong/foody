@@ -4,6 +4,11 @@
 	/*overflow-x: hidden;*/
 	/*overflow-y: auto;*/
 }
+.home{
+	overflow-y: auto;
+	height: 100vh;
+	
+}
 
 body{
 	background-color: gray;
