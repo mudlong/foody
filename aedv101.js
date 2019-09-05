@@ -32,8 +32,8 @@ const contractCode = `
 
 
 // const contractAddress = 'ct_7W4TBmvpHMpmp95stctgmBQoL9kqh6eLQUZNYRt7uHyiGdKUD';
-const contractAddress = 'ct_2VZeyiXtgLv3zGih9sGEnQMtzojRgcg9WYZtK4VQx7NfzBG2TA';
-// const contractAddress = 'ct_SYi6Xg78ZE25vfQcyS1oZsR89zW6sYE2sezBYyTGkYUzuNCnc';
+// const contractAddress = 'ct_2VZeyiXtgLv3zGih9sGEnQMtzojRgcg9WYZtK4VQx7NfzBG2TA';
+const contractAddress = 'ct_SYi6Xg78ZE25vfQcyS1oZsR89zW6sYE2sezBYyTGkYUzuNCnc';
 
 
 var client = null;
@@ -53,7 +53,7 @@ function renderFoods(){
 async function callStatic(func, args) {
   //Create a new contract instance that we can interact with
   const contract = await client.getContractInstance(contractCode, {contractAddress});
-  //Make a call to get data of smart contract func, with specefied arguments
+  //Make a call to get data of smart contract func, with specefied arguments 
   const calledGet = await contract.call(func, args, {callStatic: true}).catch(e => console.error(e));
   console.log('calledGet', calledGet);
   //Make another call to decode the data received in first call
@@ -61,6 +61,19 @@ async function callStatic(func, args) {
 
   return decodedGet;
 }
+
+async function contractCall(func, args, value) {
+  const contract = await client.getContractInstance(contractCode, {contractAddress});
+  //Make a call to write smart contract func, with aeon value input
+  const calledSet = await contract.call(func, args, {amount: value}).catch(e => console.error(e));
+  return calledSet;
+}
+jQuery("#orderBtn").on("click", ".buyFood", async function(event){
+  $("#loader").show();
+  const value = $('#ize').val();
+  alert(value + "order successfull").
+  $("#loader").hide()
+})
 
  window.addEventListener('load', async() => {
    //Display the loader .
