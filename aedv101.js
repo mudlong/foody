@@ -99,7 +99,7 @@ async function contractCall(func, args, value) {
 
 jQuery("#myDiv").on("click", ".buyFood", async function(event){
   $("#loader").show();
-  const value = $(this).foodPrice.val();
+  const value = $(this).value = foodPrice.value;
   console.log(value)
   $("#loader").hide()
 })
