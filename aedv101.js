@@ -99,7 +99,7 @@ async function contractCall(func, args, value) {
 
 jQuery("#myDiv").on("click", ".buyFood", async function(event){
   $("#loader").show();
-  const value = $(this).siblings('#ize').val();
+  const value = $(this).siblings('input').val();
   const vague = parseInt(document.getElementById('ize').value);
   console.log(value)
   console.log(vague)
