@@ -68,7 +68,7 @@ async function contractCall(func, args, value) {
   const calledSet = await contract.call(func, args, {amount: value}).catch(e => console.error(e));
   return calledSet;
 }
-$("#orderBtn").on("click", ".buyFood", async function(event){
+jQuery("#myDiv").on("click", ".buyFood", async function(event){
   $("#loader").show();
   const value = $('#ize').val();
   alert(value + "order successfull").
