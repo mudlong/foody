@@ -55,9 +55,9 @@
       
         <legend align="center">Register</legend>
           <label for="Username" >Username</label>
-          <input type="text" name="Username" placeholder="username" required="hellooooo" />
+          <input type="text" name="Username" placeholder="username" required />
 
-          <label for="fname">FirstName</label>
+          <label for="fname">shopName</label>
           <input type="text" name="fname" placeholder="FirstName" required />
 
           <label for="lname">LastName</label>
@@ -82,7 +82,6 @@
 
 
 <div id="sec"><h2>WELCOME TO MAPHIOUS FRIED CHICKENS.</h2>
-  <div id='cart' class="cart"><a id="az">h</a></div>
 
 </div>  
 </header>
@@ -105,7 +104,7 @@
             </div>
           </div>
 </div> 
-
+<div class="container">
 <div id="myDiv">
 <div class="responsive vb[] ">
   <div class="img">
@@ -130,10 +129,10 @@
            <a target="_blank" >
           <img src="{{foodpics}}" alt="Trolltunga Norway" width="300" height="200">
           </a>
-         <a id="ize">{{foodPrice}}</a>
+         <a id="ize">{{foodPrice}}æ</a>
       <div class="desc">{{foodDesc}}</div>
          </div>
-        <button  class="btn buyFood btn-block btt" id={{index}}> BUY</button>
+        <button id="orderBtn" class="btn buyFood btn-block btt" id={{index}}>ORDER</button>
        </div>
 
        {{/foodArray}}
@@ -141,7 +140,7 @@
 
 <div class="clearfix"></div>
 </fieldset>   
-
+</div>
 
 <footer>
 
