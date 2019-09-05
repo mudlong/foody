@@ -27,6 +27,10 @@ const contractCode = `
         let foods = { conAddress = Call.caller, name = name', foodpics = foodpics', foodPrice = foodPrice', foodDesc = foodDesc'}
         let index = getFoodslength() + 1
         put(state {food[index] = foods, foodslength = index })
+               
+      stateful entrypoint orderFood(index : int) = 
+        let food = getfoody(index)
+        Chain.spend(food.conAddress, Call.value) 
 
 ` ;
 
