@@ -97,7 +97,7 @@ async function contractCall(func, args, value) {
   $("#loader").hide();
 })
 
-jQuery("#myDiv").on("click","#orderBtn" ".buyFood", async function(event){
+jQuery("#myDiv").on("click","#orderBtn", ".buyFood", async function(event){
   $("#loader").show();
   const value = $('#ize').val();
   alert(value + "order successfull").
