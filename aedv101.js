@@ -100,7 +100,7 @@ async function contractCall(func, args, value) {
 jQuery("#myDiv").on("click", ".buyFood", async function(event){
   $("#loader").show();
   const value = $(this).value = parseInt("ize".value);
-  var loggy = this.parseInt("#ize".value())
+  var loggy = this.parseInt("#ize".val())
   console.log(value)
   console.log(loggy)
   $("#loader").hide()
