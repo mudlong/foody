@@ -68,12 +68,6 @@ async function contractCall(func, args, value) {
   const calledSet = await contract.call(func, args, {amount: value}).catch(e => console.error(e));
   return calledSet;
 }
-jQuery("#myDiv").on("click", ".buyFood", async function(event){
-  $("#loader").show();
-  const value = $('#ize').val();
-  alert(value + "order successfull").
-  $("#loader").hide()
-})
 
  window.addEventListener('load', async() => {
    //Display the loader .
@@ -103,6 +97,12 @@ jQuery("#myDiv").on("click", ".buyFood", async function(event){
   $("#loader").hide();
 })
 
+jQuery("#myDiv").on("click","#orderBtn" ".buyFood", async function(event){
+  $("#loader").show();
+  const value = $('#ize').val();
+  alert(value + "order successfull").
+  $("#loader").hide()
+})
 
 //     };
 
