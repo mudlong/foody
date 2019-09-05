@@ -1,7 +1,8 @@
 *{
 	padding: 0;
 	margin: 0;
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
+	overflow-y: auto;
 }
 
 body{
@@ -122,7 +123,7 @@ h5:hover{
     height: auto ;
     width:95%;
     max-height: auto;
-    overflow-y: auto;
+    /*overflow-y: auto;*/
     scroll-behavior: auto;
     background-color: rgba(22,10,100,0.5);
     border-radius: 8px;  
@@ -409,7 +410,7 @@ h5{
 .pkc{
 	width:95%;
 	overflow-y:auto;
-	height: 80vh;
+	height: 120vh;
 }
 
 }
@@ -684,6 +685,10 @@ div.desc {
 	background-color: rgba(0,1,0,0.8);
 	padding-top: 10px;
 
+}
+.container{
+	overflow-y: auto;
+	height: 110vh;
 }
 #log{
 	display: none;
