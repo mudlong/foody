@@ -100,6 +100,8 @@ async function contractCall(func, args, value) {
      renderFoods(); 
   $("#loader").hide();
 })
+  foodsLength = await callStatic('getFoodslength', []); 
+ 
 var food = [{}];
 var btn = document.getElementById('orderBtn');
 for(let i = 0; i<foodslength;i++){
