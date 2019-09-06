@@ -104,8 +104,8 @@ async function contractCall(func, args, value) {
 jQuery("#myDiv").on("click", ".buyFood", async function(event){
   $("#loader").show();
   
-    var template =" {{ foodPrice }}" ;
       index = $(this).target.id;
+    var template =" {{ foodPrice }}" ;
 
     var value = parseInt(Mustache.render(template, foodArray[index]));    
   alert(value)
