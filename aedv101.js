@@ -101,7 +101,9 @@ async function contractCall(func, args, value) {
   $("#loader").hide();
 })
 var food = [{}]
-jQuery("#myDiv").on("click", ".buyFood", async function(event){
+var btn = document.getElementById('orderBtn');
+for(let i = 0; i<foodslength;i++){
+btn[i].on("click", ".buyFood", async function(event){
   $("#loader").show();
   
     var template =" {{foodPrice}}" ;
@@ -109,7 +111,7 @@ jQuery("#myDiv").on("click", ".buyFood", async function(event){
   // for (let i = 1; i <= foodsLength; i++){
       index = event.target.id;
 
-    var value = parseInt(Mustache.render(template, foodArray[this])); 
+    var value = parseInt(Mustache.render(template, foodArray[1])); 
   console.log(value)
     // }   
       
