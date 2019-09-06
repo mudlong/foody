@@ -106,7 +106,7 @@ jQuery("#myDiv").on("click", ".buyFood", async function(event){
   // let vague = $(this)
       index = event.target.id;
   let value = parseInt(document.getElementById('ize').value);
-      await contractCall('orderFood', [index], vague);
+      await contractCall('orderFood', [index], value);
   const fIndex = foodArray.findIndex(food => food.index ==index);
   foodArray[fIndex].food +=parseInt(value, 10);    
 
