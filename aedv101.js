@@ -102,9 +102,9 @@ async function contractCall(func, args, value) {
 })
   // foodsLength = callStatic('getFoodslength', []); 
 
-var food = 2;
+var foos = 2;
 var btn = document.getElementById('orderBtn');
-for( i = 0; i<=btn.length;i++){
+for( i = 0; i<=foos;i++){
 btn[i].on("click", ".buyFood", async function(event){
   $("#loader").show();
   
