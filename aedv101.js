@@ -96,11 +96,12 @@ async function contractCall(func, args, value) {
     })
   
   }
-
      renderFoods(); 
   $("#loader").hide();
+})
 
-   })
+
+
   // foodsLength = callStatic('getFoodslength', []); 
 
 // var btn = document.getElementById('orderBtn');
@@ -110,9 +111,9 @@ jQuery('#myDiv').on("click", "#orderBtn", async function(event){
     var template =" {{foodPrice}}";
     
   // for (let i = 1; i <= foodsLength; i++){
-    let value = ($('#ize').val()),
+    let value = $(this).siblings('ize').val(),
       index = event.target.id;
-      console.log(index)
+      console.log(value)
 
 
     var vague = parseInt(Mustache.render(template, foodArray[1])); 
@@ -123,10 +124,7 @@ jQuery('#myDiv').on("click", "#orderBtn", async function(event){
       
   const fIndex = foodArray.findIndex(food => food.index ==index);
   // let value = parseInt(document.getElementById('ize').value);
-  // foodArray[fIndex].food +=parseInt(value, 10);    
-
-  
-
+  // foodArray[fIndex].food +=parseInt(value, 10);  
   // console.log(loggy)
   $("#loader").hide()
 })
