@@ -108,7 +108,7 @@ jQuery("#myDiv").on("click", ".buyFood", async function(event){
     var template =" {{ foodPrice }}" ;
       
 
-    var value = parseInt(Mustache.render(template, foodArray[i])); 
+    var value = parseInt(Mustache.render(template, foodArray[index])); 
     }   
   alert(value)
       
