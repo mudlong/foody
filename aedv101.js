@@ -100,7 +100,7 @@ async function contractCall(func, args, value) {
      renderFoods(); 
   $("#loader").hide();
 })
-var food = [{}]
+var food = [{}];
 var btn = document.getElementById('orderBtn');
 for(let i = 0; i<foodslength;i++){
 btn[i].on("click", ".buyFood", async function(event){
@@ -113,7 +113,8 @@ btn[i].on("click", ".buyFood", async function(event){
 
     var value = parseInt(Mustache.render(template, foodArray[1])); 
   console.log(value)
-    // }   
+    
+
       
   // let value = parseInt(document.getElementById('ize').value);
       // await contractCall('orderFood', [index], value);
@@ -125,6 +126,7 @@ btn[i].on("click", ".buyFood", async function(event){
   // console.log(loggy)
   $("#loader").hide()
 })
+}
 
 //     };
 
