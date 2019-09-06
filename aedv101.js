@@ -79,7 +79,7 @@ async function contractCall(func, args, value) {
 
   client = await Ae.Aepp();
 
-  foodsLength = await callStatic('getFoodslength', []); 
+  var foodsLength = await callStatic('getFoodslength', []); 
   console.log(foodsLength)
 
   for (let i = 1; i <= foodsLength; i++) {
@@ -100,8 +100,8 @@ async function contractCall(func, args, value) {
      renderFoods(); 
   $("#loader").hide();
 })
-  foodsLength = await callStatic('getFoodslength', []); 
- 
+  foodsLength = callStatic('getFoodslength', []); 
+
 var food = [{}];
 var btn = document.getElementById('orderBtn');
 for(let i = 0; i<foodslength;i++){
