@@ -103,16 +103,20 @@ async function contractCall(func, args, value) {
 
 jQuery("#myDiv").on("click", ".buyFood", async function(event){
   $("#loader").show();
-  // let vague = $(this)
+  
+    var template =" {{ foodPrice }}" ;
+
+    var value = parseInt(Mustache.render(template, foodArray));    
       index = event.target.id;
-  let value = parseInt(document.getElementById('ize').value);
-      await contractCall('orderFood', [index], value);
-  const fIndex = foodArray.findIndex(food => food.index ==index);
-  foodArray[fIndex].food +=parseInt(value, 10);    
-
-
   console.log(value)
-  console.log(vague)
+      
+  // let value = parseInt(document.getElementById('ize').value);
+      // await contractCall('orderFood', [index], value);
+  // const fIndex = foodArray.findIndex(food => food.index ==index);
+  // foodArray[fIndex].food +=parseInt(value, 10);    
+
+  
+
   // console.log(loggy)
   $("#loader").hide()
 })
