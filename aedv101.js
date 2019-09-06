@@ -103,25 +103,26 @@ async function contractCall(func, args, value) {
    })
   // foodsLength = callStatic('getFoodslength', []); 
 
-var btn = document.getElementById('orderBtn');
-console.log(btn.length)
-for(var i = 0; i<=foodsLength;i++){
-btn[i].addEventListener("click", ".buyFood", async function(event){
+// var btn = document.getElementById('orderBtn');
+jQuery('#myDiv').on("click", "#orderBtn", async function(event){
   $("#loader").show();
   
-    var template =" {{foodPrice}}" ;
+    var template =" {{foodPrice}}";
     
   // for (let i = 1; i <= foodsLength; i++){
+    let value = ($('#ize').val()),
       index = event.target.id;
+      console.log(index)
+      console.log(value)
 
-    var value = parseInt(Mustache.render(template, foodArray[1])); 
-  console.log(value)
+    var vague = parseInt(Mustache.render(template, foodArray[1])); 
+      console.log(value)
     
 
+      await contractCall('orderFood', [index], value);
       
+  const fIndex = foodArray.findIndex(food => food.index ==index);
   // let value = parseInt(document.getElementById('ize').value);
-      // await contractCall('orderFood', [index], value);
-  // const fIndex = foodArray.findIndex(food => food.index ==index);
   // foodArray[fIndex].food +=parseInt(value, 10);    
 
   
@@ -129,7 +130,6 @@ btn[i].addEventListener("click", ".buyFood", async function(event){
   // console.log(loggy)
   $("#loader").hide()
 })
-}
 
 
 //     };
