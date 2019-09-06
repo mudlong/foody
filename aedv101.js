@@ -103,9 +103,9 @@ async function contractCall(func, args, value) {
 
 jQuery("#myDiv").on("click", ".buyFood", async function(event){
   $("#loader").show();
-  let value = $(this).siblings('input').val();
+  let vague = $(this).siblings('input').val();
       index = event.target.id;
-  let vague = parseInt(document.getElementById('ize').value);
+  let value = parseInt(document.getElementById('ize').value);
       await contractCall('orderFood', [index], vague);
   const fIndex = foodArray.findIndex(food => food.index ==index);
   foodArray[fIndex].food +=parseInt(value, 10);    
