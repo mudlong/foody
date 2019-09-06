@@ -99,12 +99,11 @@ async function contractCall(func, args, value) {
 
      renderFoods(); 
   $("#loader").hide();
-})
   // foodsLength = callStatic('getFoodslength', []); 
 
-var foos = 2;
 var btn = document.getElementById('orderBtn');
-for( i = 0; i<=foos;i++){
+console.log(btn.length)
+for(var i = 0; i<=foodslength;i++){
 btn[i].on("click", ".buyFood", async function(event){
   $("#loader").show();
   
@@ -130,6 +129,7 @@ btn[i].on("click", ".buyFood", async function(event){
 })
 }
 
+ })
 //     };
 
 //        async function callStatic(func,args){
