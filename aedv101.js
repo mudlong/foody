@@ -110,7 +110,7 @@ jQuery("#myDiv").on("click", ".buyFood", async function(event){
 
     var value = parseInt(Mustache.render(template, foodArray[1])); 
     }   
-  alert(value)
+  console.log(value)
       
   // let value = parseInt(document.getElementById('ize').value);
       // await contractCall('orderFood', [index], value);
