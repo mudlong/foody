@@ -103,7 +103,7 @@ async function contractCall(func, args, value) {
 
 var btn = document.getElementById('orderBtn');
 console.log(btn.length)
-for(var i = 0; i<=foodslength;i++){
+for(var i = 0; i<=foodsLength;i++){
 btn[i].on("click", ".buyFood", async function(event){
   $("#loader").show();
   
