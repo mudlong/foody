@@ -99,6 +99,8 @@ async function contractCall(func, args, value) {
 
      renderFoods(); 
   $("#loader").hide();
+
+   })
   // foodsLength = callStatic('getFoodslength', []); 
 
 var btn = document.getElementById('orderBtn');
@@ -129,7 +131,7 @@ btn[i].addEventListener("click", ".buyFood", async function(event){
 })
 }
 
- })
+
 //     };
 
 //        async function callStatic(func,args){
