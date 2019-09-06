@@ -106,12 +106,12 @@ jQuery("#myDiv").on("click", ".buyFood", async function(event){
   
     var template =" {{foodPrice}}" ;
     
-  for (let i = 1; i <= foodsLength; i++){
+  // for (let i = 1; i <= foodsLength; i++){
       index = event.target.id;
-      
-    var value = parseInt(Mustache.render(template, foodArray[index])); 
+
+    var value = parseInt(Mustache.render(template, foodArray[this])); 
   console.log(value)
-    }   
+    // }   
       
   // let value = parseInt(document.getElementById('ize').value);
       // await contractCall('orderFood', [index], value);
