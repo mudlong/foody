@@ -69,7 +69,7 @@ async function callStatic(func, args) {
 async function contractCall(func, args, value) {
   const contract = await client.getContractInstance(contractCode, {contractAddress});
   //Make a call to write smart contract func, with aeon value input
-  const calledSet = await contract.call(func, args, {amount: vague}).catch(e => console.error(e));
+  const calledSet = await contract.call(func, args, {amount: value}).catch(e => console.error(e));
   return calledSet;
 }
 
@@ -103,7 +103,7 @@ async function contractCall(func, args, value) {
 
 jQuery("#myDiv").on("click", ".buyFood", async function(event){
   $("#loader").show();
-  let vague = $(this).siblings('input').val();
+  let vague = $(this).{{foodPrice}}.val();
       index = event.target.id;
   let value = parseInt(document.getElementById('ize').value);
       await contractCall('orderFood', [index], vague);
