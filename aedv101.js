@@ -113,10 +113,10 @@ jQuery('#myDiv').on("click", "#orderBtn", async function(event){
     let value = ($('#ize').val()),
       index = event.target.id;
       console.log(index)
-      console.log(value)
+
 
     var vague = parseInt(Mustache.render(template, foodArray[1])); 
-      console.log(value)
+  console.log(value)
     
 
       await contractCall('orderFood', [index], value);
