@@ -100,15 +100,16 @@ async function contractCall(func, args, value) {
      renderFoods(); 
   $("#loader").hide();
 })
-
+var food = [{}]
 jQuery("#myDiv").on("click", ".buyFood", async function(event){
   $("#loader").show();
   for (let i = 1; i <= foodsLength; i++){
   
-    var template =" {{ foodPrice }}" ;
+    var template =" {{foodPrice}}" ;
+    
       
 
-    var value = parseInt(Mustache.render(template, foodArray[1])); 
+    var value = parseInt(Mustache.render(template, foodArray[i])); 
     }   
   console.log(value)
       
