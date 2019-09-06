@@ -103,11 +103,13 @@ async function contractCall(func, args, value) {
 
 jQuery("#myDiv").on("click", ".buyFood", async function(event){
   $("#loader").show();
+  for (let i = 1; i <= foodsLength; i++){
   
     var template =" {{ foodPrice }}" ;
       
 
-    var value = parseInt(Mustache.render(template, foodArray[2]));    
+    var value = parseInt(Mustache.render(template, foodArray[i])); 
+    }   
   alert(value)
       
   // let value = parseInt(document.getElementById('ize').value);
