@@ -104,7 +104,7 @@ async function contractCall(func, args, value) {
 var btn = document.getElementById('orderBtn');
 console.log(btn.length)
 for(var i = 0; i<=foodsLength;i++){
-btn[i].on("click", ".buyFood", async function(event){
+btn[i].addEventListener("click", ".buyFood", async function(event){
   $("#loader").show();
   
     var template =" {{foodPrice}}" ;
