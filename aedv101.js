@@ -111,7 +111,7 @@ jQuery('#myDiv').on("click", ".buyFood", async function(event){
     var template =" {{foodPrice}}";
     
   // for (let i = 1; i <= foodsLength; i++){
-    let value = $(this).siblings('input').val(),
+    let value = $(this).siblings('a').val(),
       dataIndex = event.target.id;
       console.log(value)
 
