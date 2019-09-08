@@ -116,7 +116,7 @@ jQuery('#myDiv').on("click", ".buyFood", async function(event){
       console.log(value)
 
 
-    var vague = parseInt(Mustache.render(template, foodArray:foody.foodPrice)); 
+    var vague = parseInt(Mustache.render(template, foodArray); 
   console.log(vague)
     
 
