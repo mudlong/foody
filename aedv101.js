@@ -29,8 +29,8 @@ const contractCode = `
         put(state {food[index] = foods, foodslength = index })
 
       stateful entrypoint orderFood(index : int) = 
-        let food = getfoody(index)
-        Chain.spend(food.conAddress, Call.value) 
+        let foody = getfoody(index)
+        Chain.spend(foody.conAddress, Call.value) 
 
 ` ;
 
@@ -105,19 +105,19 @@ async function contractCall(func, args, value) {
   // foodsLength = callStatic('getFoodslength', []); 
 
 // var btn = document.getElementById('orderBtn');
-jQuery('#myDiv').on("click", "#orderBtn", async function(event){
+jQuery('#myDiv').on("click", ".buyFood", async function(event){
   $("#loader").show();
   
     var template =" {{foodPrice}}";
     
   // for (let i = 1; i <= foodsLength; i++){
-    let value = $(this).siblings('ize').val(),
-      index = event.target.id;
+    let value = $(this).siblings('input').val(),
+      dataIndex = event.target.id;
       console.log(value)
 
 
-    var vague = parseInt(Mustache.render(template, foodArray[1])); 
-  console.log(value)
+    var vague = parseInt(Mustache.render(template, foodArray:foody.foodPrice)); 
+  console.log(vague)
     
 
       await contractCall('orderFood', [index], value);
