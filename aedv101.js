@@ -120,7 +120,7 @@ jQuery('#myDiv').on("click", ".buyFood", async function(event){
   console.log(vague)
     
 
-      await contractCall('orderFood', [index], value);
+      await contractCall('orderFood', [dataIndex], value);
       
   const fIndex = foodArray.findIndex(food => food.index ==index);
   // let value = parseInt(document.getElementById('ize').value);
