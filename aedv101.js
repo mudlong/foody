@@ -46,7 +46,7 @@ var foodsLength = 0;
 var foodArray = [];
   
 
-function renderFoods(){
+function renderFoods(){   
   var template = $('#template').html();
   Mustache.parse(template);
   var rendered = Mustache.render(template, {foodArray});
@@ -104,29 +104,41 @@ async function contractCall(func, args, value) {
 
   // foodsLength = callStatic('getFoodslength', []); 
 
-// var btn = document.getElementById('orderBtn');
-jQuery('#myDiv').on("click", ".buyFood", async function(event){
+var btn = $('#orderFood').length
+  for (let i = 1; i <= Length i++){
+$('#myDiv').on("click", ".buyFood", async function(event){
   $("#loader").show();
-  
-    var template =" {{foodPrice}}";
     
-  // for (let i = 1; i <= foodsLength; i++){
-    let value = $(this).siblings('a').val(),
-      dataIndex = event.target.id;
+
+  var template =" {{foodPrice}}";
+
+      let value = parseInt(Mustache.render(template,dataArray[1]));
+
+    
+      // let value = parseInt($(this).siblings('input').val()),
+      // index = event.target.id;
       console.log(value)
 
 
-    var vague = parseInt(Mustache.render(template, foodArray))
-  console.log(vague)
+  //   var vague = parseInt(Mustache.render(template, foodArray))
+  // console.log(vague)
     
 
-      await contractCall('orderFood', [dataIndex], value);
+      // await contractCall('orderFood', [index], value);
       
-  const fIndex = foodArray.findIndex(food => food.index ==index);
+  // const fIndex = foodArray.findIndex(food => food.index ==index);
   // let value = parseInt(document.getElementById('ize').value);
   // foodArray[fIndex].food +=parseInt(value, 10);  
   // console.log(loggy)
   $("#loader").hide()
+})
+
+
+$('#foodBtn').on('click', function(){
+  var template =" {{foodPrice}}" ;
+      let value = parseInt(Mustache.render(template,dataArray[2]));
+
+  alert(value)
 })
 
 
