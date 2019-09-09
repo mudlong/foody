@@ -134,7 +134,7 @@ $('#myDiv').on("click", ".buyFood", async function(event){
 })
 
 
-$('#foodBtn').on('click', function(){
+$('#orderBtn').on('click', function(){
   var template =" {{foodPrice}}" ;
       let value = parseInt(Mustache.render(template,dataArray[2]));
 
