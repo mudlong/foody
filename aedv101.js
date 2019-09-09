@@ -104,7 +104,6 @@ async function contractCall(func, args, value) {
 
   // foodsLength = callStatic('getFoodslength', []); 
 
-// var btn = $('#orderFood').length
   // for (let i = 1; i <= Length i++){
 $('#myDiv').on("click", ".buyFood", async function(event){
   $("#loader").show();
@@ -133,13 +132,15 @@ $('#myDiv').on("click", ".buyFood", async function(event){
   $("#loader").hide()
 })
 
+for(var i = 0 ; i < $('.buyFood').length; i++){
 
-$('#orderBtn').on('click', function(){
+$('.buyFood')[i].on('click', function(){
   var template =" {{foodPrice}}" ;
       let vague = parseInt(Mustache.render(template,foodArray[1]));
 
   console.log(vague)
 })
+}
 
 
 //     };
