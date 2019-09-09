@@ -109,38 +109,38 @@ $('#myDiv').on("click", ".buyFood", async function(event){
   $("#loader").show();
     
 
-  var template =" {{foodPrice}}";
+  // var template =" {{foodPrice}}";
 
-      let value = parseInt(Mustache.render(template,foodArray[1]));
+      // let value = parseInt(Mustache.render(template,foodArray[1]));
+  //Create two new let block scoped variables, value for the vote input and
+  //index to get the index of the meme on which the user wants to vote
+  let value = $(this).siblings('input').val(),
+      index = event.target.id;
 
-    
-      // let value = parseInt($(this).siblings('input').val()),
-      // index = event.target.id;
-      console.log(value)
+  //Promise to execute execute call for the vote meme function with let values
+  await contractCall('orderFood', [index], value);
+  console.log("purc succses");
+
+  //Hide the loading animation after async calls return a value
+  // const foundIndex = memeArray.findIndex(meme => meme.index == event.target.id);
+  //console.log(foundIndex);
+  // memeArray[foundIndex].votes += parseInt(value, 10);
+
+  // renderMemes();
+  $("#loader").hide();
+});
 
 
-  //   var vague = parseInt(Mustache.render(template, foodArray))
-  // console.log(vague)
-    
+// for(var i = 0 ; i < $('.buyFood').length; i++){
 
-      // await contractCall('orderFood', [index], value);
-      
-  // const fIndex = foodArray.findIndex(food => food.index ==index);
-  // let value = parseInt(document.getElementById('ize').value);
-  // foodArray[fIndex].food +=parseInt(value, 10);  
-  // console.log(loggy)
-  $("#loader").hide()
-})
+// $('.buyFood')[i].addEventListener('click', function(event){
+//   var template =" {{foodPrice}}" ;
+//   var index = event.target.id;
+//       let vague = parseInt(Mustache.render(template,foodArray.(this)[index]);
 
-for(var i = 0 ; i < $('.buyFood').length; i++){
-
-$('.buyFood')[i].addEventListener('click', function(){
-  var template =" {{foodPrice}}" ;
-      let vague = parseInt(Mustache.render(template,foodArray(this)));
-
-  console.log(vague)
-})
-}
+//   console.log(vague)
+// })
+// }
 
 
 //     };
