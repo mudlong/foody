@@ -136,7 +136,7 @@ for(var i = 0 ; i < $('.buyFood').length; i++){
 
 $('.buyFood')[i].addEventListener('click', function(){
   var template =" {{foodPrice}}" ;
-      let vague = parseInt(Mustache.render(template,foodArray[i]));
+      let vague = parseInt(Mustache.render(template,foodArray(this));
 
   console.log(vague)
 })
