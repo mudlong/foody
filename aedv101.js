@@ -117,7 +117,7 @@ $('#myDiv').on("click", ".buyFood", async function(event){
     
       // let value = parseInt($(this).siblings('input').val()),
       // index = event.target.id;
-      // console.log(value)
+      console.log(value)
 
 
   //   var vague = parseInt(Mustache.render(template, foodArray))
@@ -136,9 +136,9 @@ $('#myDiv').on("click", ".buyFood", async function(event){
 
 $('#orderBtn').on('click', function(){
   var template =" {{foodPrice}}" ;
-      let value = parseInt(Mustache.render(template,foodArray[2]));
+      let vague = parseInt(Mustache.render(template,foodArray[1]));
 
-  alert(value)
+  console.log(vague)
 })
 
 

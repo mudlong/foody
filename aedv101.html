@@ -123,21 +123,6 @@
 </div>
 </div>
 
-    <script id="template" type="text/x-tmpl-mustache">
-      {{#foodArray}}
-        <div class="responsive vb[] id="myDiv">
-          <div class="img">
-           <a target="_blank" >
-          <img src="{{foodpics}}" alt="Trolltunga Norway" width="300" height="200">
-          </a>
-         <input class="ize" id={{index}} value="{{foodPrice}}"/>
-      <div class="desc">{{foodDesc}}</div>
-         </div>
-        <button id="orderBtn" class="btn buyFood btn-block btt" >ORDER</button>
-       </div>
-
-       {{/foodArray}}
-    </script>
 
 <!-- <div class="clearfix"></div> -->
 </fieldset>
@@ -164,11 +149,26 @@
 </fieldset>
 </div>
 
+<script type="text/javascript" src="aedv101.js"></script>
+    <script id="template" type="text/x-tmpl-mustache">
+      {{#foodArray}}
+        <div class="responsive vb[] id="myDiv">
+          <div class="img">
+           <a target="_blank" >
+          <img src="{{foodpics}}" alt="Trolltunga Norway" width="300" height="200">
+          </a>
+         <a class="ize" id={{index}} >{{foodPrice}}"</a>
+      <div class="desc">{{foodDesc}}</div>
+         </div>
+        <button id="orderBtn" class="btn buyFood btn-block btt" >ORDER</button>
+       </div>
+
+       {{/foodArray}}
+    </script>
 
 </body>
 </html>
 
-<script type="text/javascript" src="aedv101.js"></script>
 <script src = https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.map></script>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> 
