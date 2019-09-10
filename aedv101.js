@@ -109,9 +109,11 @@ async function contractCall(func, args, value) {
 jQuery('#myDiv').on("click", ".btn", async function(event){
   $("#loader").show();
     
-
-  let value = parseInt($(this).siblings('input').val()),
+      var template = "{{foodPrice}}";
+      let value = parseInt(Mustache.render(template,foodArray[index]),
       index = event.target.id;
+        
+  // let value = parseInt($(this).siblings('input').val()),
 
   //Promise to execute execute call for the vote meme function with let values
   console.log(value)
