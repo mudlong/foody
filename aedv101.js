@@ -114,7 +114,8 @@ jQuery('#myDiv').on("click", ".btn", async function(event){
       index = event.target.id;
 
   //Promise to execute execute call for the vote meme function with let values
-  await contractCall('orderFood', [i], value);
+  console.log(index)
+  await contractCall('orderFood', [index], value);
   console.log("purc succses");
 
   //Hide the loading animation after async calls return a value
