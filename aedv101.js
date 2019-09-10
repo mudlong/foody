@@ -110,10 +110,11 @@ jQuery('#myDiv').on("click", ".btn", async function(event){
   $("#loader").show();
     
 
-  let value = $(this).siblings('input').val(),
+  let value = parseInt($(this).siblings('input').val()),
       index = event.target.id;
 
   //Promise to execute execute call for the vote meme function with let values
+  console.log(value)
   console.log(index)
   await contractCall('orderFood', [index], value);
   console.log("purc succses");
