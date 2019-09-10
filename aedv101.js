@@ -29,8 +29,8 @@ const contractCode = `
         put(state {food[index] = foods, foodslength = index })
 
       stateful entrypoint orderFood(index : int) = 
-        let foody = getfoody(index)
-        Chain.spend(foody.conAddress, Call.value) 
+        let foodos = getfoody(index)
+        Chain.spend(foodos.conAddress, Call.value) 
 
 ` ;
 
@@ -93,6 +93,7 @@ async function contractCall(func, args, value) {
       foodpics: foody.foodpics,
       foodPrice: foody.foodPrice,
       foodDesc: foody.foodDesc,
+      index :i,  
     })
   
   }
@@ -109,11 +110,6 @@ jQuery('#myDiv').on("click", ".btn", async function(event){
   $("#loader").show();
     
 
-  // var template =" {{foodPrice}}";
-
-      // let value = parseInt(Mustache.render(template,foodArray[1]));
-  //Create two new let block scoped variables, value for the vote input and
-  //index to get the index of the meme on which the user wants to vote
   let value = $(this).siblings('input').val(),
       index = event.target.id;
 
