@@ -99,18 +99,19 @@ async function contractCall(func, args, value) {
   }
      renderFoods(); 
   $("#loader").hide();
+
 })
 
 
 
   // foodsLength = callStatic('getFoodslength', []); 
 
-  // for (let i = 1; i <= Length i++){
-jQuery('#myDiv').on("click", ".btn", async function(event){
+  for (let i = 1; i <= $('.btn').length ; i++){
+$('.btn')[i].on("click", async function(event){
   $("#loader").show();
+      var index = event.target.id,
     
       var template = "{{foodPrice}}";
-      let index = event.target.id,
        value = parseInt(Mustache.render(template, foodArray[index]));
         
   // let value = parseInt($(this).siblings('input').val()),
@@ -129,6 +130,7 @@ jQuery('#myDiv').on("click", ".btn", async function(event){
   // renderMemes();
   $("#loader").hide();
 });
+}
 
 
 // for(var i = 0 ; i < $('.buyFood').length; i++){
