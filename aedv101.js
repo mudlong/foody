@@ -106,8 +106,8 @@ async function contractCall(func, args, value) {
 
   // foodsLength = callStatic('getFoodslength', []); 
 
-  for (let i = 1; i <= $('.btn').length ; i++){
-$('.btn')[i].on("click", async function(event){
+  
+$('.btn').on("click", async function(event){
   $("#loader").show();
       var index = event.target.id,
           template = "{{foodPrice}}";
@@ -129,8 +129,6 @@ $('.btn')[i].on("click", async function(event){
   // renderMemes();
   $("#loader").hide();
 });
-};
-
 
 // for(var i = 0 ; i < $('.buyFood').length; i++){
 
