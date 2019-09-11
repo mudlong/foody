@@ -105,21 +105,20 @@ async function contractCall(func, args, value) {
 
 
   // foodsLength = callStatic('getFoodslength', []); 
-// var x = document.getElementsByClassName("btn[]");
-// console.log(x.length);
 
-  // for(let i = 1; i <= x.length; i++){
-jQuery('#myDiv').on("click","btn", async function(event){
+  for (let i = 1; i <= $('.btn').length ; i++){
+$('.btn')[i].on("click", async function(event){
   $("#loader").show();
       var index = event.target.id,
-       template = "{{foodPrice}}";
-       value = this.parseInt(Mustache.render(template, foodArray[index]));
+    
+      var template = "{{foodPrice}}";
+       value = parseInt(Mustache.render(template, foodArray[index]));
         
   // let value = parseInt($(this).siblings('input').val()),
 
   //Promise to execute execute call for the vote meme function with let values
   console.log(value)
-  console.log(index + "hope day")
+  console.log(index)
   await contractCall('orderFood', [index], value);
   console.log("purc succses");
 
@@ -131,7 +130,7 @@ jQuery('#myDiv').on("click","btn", async function(event){
   // renderMemes();
   $("#loader").hide();
 });
-// };
+};
 
 
 // for(var i = 0 ; i < $('.buyFood').length; i++){
