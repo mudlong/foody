@@ -109,7 +109,7 @@ var x = document.getElementsByClassName("btn[]");
 console.log(x.length);
 
   // for(let i = 1; i <= x.length; i++){
-jQuery('#myDiv').on("click", "btn[]" async function(event){
+jQuery('#myDiv').on("click", "btn[]", async function(event){
   $("#loader").show();
       var index = event.target.id,
        template = "{{foodPrice}}";
