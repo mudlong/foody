@@ -111,7 +111,7 @@ jQuery('#myDiv').on("click",".btn", async function(event){
   $("#loader").show();
           let template = "{{foodPrice}}",
          index = event.target.id,
-      value = parseInt(Mustache.render(template, this.foodArray[1]));
+      value = parseInt(Mustache.render(template, foodArray[parseInt(this.value)]));
         
   // let value = parseInt($(this).siblings('input').val());
 
