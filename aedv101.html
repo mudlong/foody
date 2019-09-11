@@ -148,7 +148,6 @@
 
 </fieldset>
 </div>
-<script type="text/javascript" src="aedv101.js"></script>
 
     <script id="template" type="text/x-tmpl-mustache">
       {{#foodArray}}
@@ -157,11 +156,11 @@
            <a target="_blank" >
           <img src="{{foodpics}}" alt="Trolltunga Norway" width="300" height="200">
           </a>
-         <a id={{index}} class="ize">{{foodPrice}} {{index}}"</a>
+         <a id={{index}} class="ize">{{foodPrice}}"</a>
          <input type="number"  placeholder="Amount" id={{index}}>
       <div class="desc">{{foodDesc}}</div>
          </div>
-        <button id={{index}} class="btn buyFood btn-block btt"  >ORDER{{index}}</button>
+        <button id={{index}} class="btn buyFood btn-block btt"  >ORDER</button>
        </div>
 
        {{/foodArray}}
@@ -170,6 +169,7 @@
 </body>
 </html>
 
+<script type="text/javascript" src="aedv101.js"></script>
 <script src = https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.map></script>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> 
