@@ -109,15 +109,15 @@ async function contractCall(func, args, value) {
   
 $('.btn').on("click", async function(event){
   $("#loader").show();
-      // var index = event.target.id,
-      //     template = "{{foodPrice}}",
-      //  value = parseInt(Mustache.render(template, foodArray[index]));
+      var index = event.target.id,
+          template = "{{foodPrice}}",
+       value = parseInt(Mustache.render(template, foodArray[index]));
         
-  // let value = parseInt($(this).siblings('input').val()),
+  // let value = parseInt($(this).siblings('input').val());
 
   //Promise to execute execute call for the vote meme function with let values
-  // console.log(value)
-  // console.log(index)
+  console.log(value)
+  console.log(index)
   // await contractCall('orderFood', [index], value);
   console.log("purc succses");
 
