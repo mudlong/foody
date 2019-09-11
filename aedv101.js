@@ -107,7 +107,7 @@ async function contractCall(func, args, value) {
   // foodsLength = callStatic('getFoodslength', []); 
 
   
-jQuery('myDiv').on("click",".btn", async function(event){
+jQuery('#myDiv').on("click",".btn", async function(event){
   $("#loader").show();
       var index = event.target.id,
           template = "{{foodPrice}}",
