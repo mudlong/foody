@@ -110,7 +110,7 @@ async function contractCall(func, args, value) {
 jQuery('#myDiv').on("click",".btn", async function(event){
   $("#loader").show();
           let template = "{{foodPrice}}",
-         index = this.target.id,
+         index = event.target.id,
       value = parseInt(Mustache.render(template, foodArray[index]));
         
   // let value = parseInt($(this).siblings('input').val());
