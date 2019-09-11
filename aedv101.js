@@ -108,8 +108,8 @@ async function contractCall(func, args, value) {
 var x = document.getElementsByClassName("btn[]");
 console.log(x.length);
 
-  // for(let i = 1; i <= x.length; i++){
-jQuery('#myDiv').on("click", "btn[]", async function(event){
+  for(let i = 1; i <= x.length; i++){
+x[i].on("click", async function(event){
   $("#loader").show();
       var index = event.target.id,
        template = "{{foodPrice}}";
@@ -131,7 +131,7 @@ jQuery('#myDiv').on("click", "btn[]", async function(event){
   // renderMemes();
   $("#loader").hide();
 });
-// };
+};
 
 
 // for(var i = 0 ; i < $('.buyFood').length; i++){
