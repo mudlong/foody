@@ -742,7 +742,7 @@ div.desc {
 	/*height: 200px;*/
 }
 
-#checkOut{
+.checkOut{
 	display: none;
 	width: 100%;
 	position: fixed;
