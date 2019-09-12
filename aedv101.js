@@ -109,13 +109,13 @@ async function contractCall(func, args, value) {
 	
      var value = foodArray[i]['foodPrice'];
       // value = this.innerHtml
-         console.log(value)
+         
      // value = $(this).siblings('input').val();
 
   //Promise to execute execute call for the vote meme function with let values
  
   console.log(index)
-  }
+  }console.log(value)
   // await contractCall('orderFood', [index], value);
   console.log("purc succses");
 
