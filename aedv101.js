@@ -99,7 +99,7 @@ async function contractCall(func, args, value) {
      
      x[i].addEventListener("click", async function(event){
       // document.getElementsByClassName('.checkOut').style.display='block';
-     document.getElementById('checkOut').style.display='block';
+     $('#checkOut').style.display='block';
 
      $('.btt').on("click", async function(event){
 
