@@ -99,13 +99,14 @@ async function contractCall(func, args, value) {
   }
      renderFoods(); 
   $("#loader").hide();
-	 jQuery('#myDiv').on("click", ".btn", async function(event){
+	 for (let i = 0; i < foodArray.length; i++) {
+	 jQuery('.btn)[i].on("click", async function(event){
   $("#loader").show();
           let template = "{{foodPrice}}",
          index = event.target.id;
 	
 
-//   for (let i = 0; i < foodArray.length; i++) {
+//   
 // 	if(index == i){
      var value = foodArray[index]['foodPrice'];
       // value = this.innerHtml
@@ -118,6 +119,7 @@ async function contractCall(func, args, value) {
   console.log(index)
   // await contractCall('orderFood', [index], value);
   console.log("purc succses");
+	 }
 
   //Hide the loading animation after async calls return a value
   // const foundIndex = memeArray.findIndex(meme => meme.index == event.target.id);
