@@ -107,9 +107,7 @@ async function contractCall(func, args, value) {
   $("#loader").show();
           let template = "{{foodPrice}}",
          index = event.target.id;
-	
-
-//   
+		 
 // 	if(index == i){
      var value = foodArray[i]['foodPrice'];
       // value = this.innerHtml
