@@ -110,7 +110,11 @@ async function contractCall(func, args, value) {
 jQuery('#myDiv').on("click",".btn", async function(event){
   $("#loader").show();
           let template = "{{foodPrice}}",
-         index = event.target.id,
+         index = event.target.id;
+	  var foodsLength = await callStatic('getFoodslength', []); 
+  console.log(foodsLength)
+
+  for (let i = 1; i <= foodsLength; i++) {
       value = parseInt(Mustache.render(template, foodArray[i]['foodPrice']));
       // value = this.innerHtml
         
@@ -119,6 +123,7 @@ jQuery('#myDiv').on("click",".btn", async function(event){
   //Promise to execute execute call for the vote meme function with let values
   console.log(value)
   console.log(index)
+  }
   // await contractCall('orderFood', [index], value);
   console.log("purc succses");
 
