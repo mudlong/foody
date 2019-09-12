@@ -127,9 +127,10 @@ h5:hover{
     border:2px solid rgba(10,10,10,.2);
     padding: 4px;
     height: auto ;
+    min-height: 300px;
     width:95%;
     max-height: auto;
-    /*overflow-y: auto;*/
+    overflow-y: auto;
     scroll-behavior: auto;
     background-color: rgba(22,10,100,0.5);
     border-radius: 8px;  
@@ -210,6 +211,7 @@ li{
 }
 .containar{
 	width: 100px;
+	overflow-y: auto;
 
 }
 .btt{
@@ -273,7 +275,7 @@ label{
 	text-shadow: 1px 2px 2px darkblue, 1px 0 2px black, 2px 0 2px darkblue;
 
 }
-input[type=text],input[type=password],input[type=submit],input[type=email]{
+input[type=text],input[type=password],input[type=submit],input[type=email],input[type=phone]{
 	border-radius: 3px;
 	border: 2px solid silver;
 	display: block;
@@ -738,6 +740,10 @@ div.desc {
 	width:150px;
 	font-size: 12px;
 	/*height: 200px;*/
+}
+
+#checkOut{
+	display:none;
 }
 /*@media screen and (min-height: 500px){
 	li{

@@ -3,12 +3,12 @@
 <head>
   <title></title>
   <link rel="stylesheet" type="text/css" href="chihome.css">
-  <link rel="stylesheet"
+  <!-- <link rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
+ -->
 </head>
 <body>
 <div class="hpme">
@@ -86,18 +86,6 @@
 
 </div>  
 </header>
-<fieldset class="pkc">
-<legend>Order menu</legend>
-
-<div class="menu">
-  <div class="hr"><hr><hr><hr></div>
-  <a href="">+Chickens</a>
-  <a href="">+Pizza</a>
-  <a href="">+Burger</a>
-  <a href="">+Shawarma</a>
-  <a href="">+Drinks</a>
-  <a href="">more+</a>
-</div>
   <div id="message">
             <div id="loader" class="alert alert-light">
               <img src="spinner4.gif">
@@ -105,6 +93,18 @@
             </div>
           </div>
 </div> 
+<fieldset class="pkc">
+<legend>Order menu</legend>
+
+<!-- <div class="menu">
+  <div class="hr"><hr><hr><hr></div>
+  <a href="">+Chickens</a>
+  <a href="">+Pizza</a>
+  <a href="">+Burger</a
+  <a href="">+Shawarma</a>
+  <a href="">+Drinks</a>
+  <a href="">more+</a>
+</div> -->
 <div class="container">
 <div id="myDiv">
 <div class="responsive vb[] ">
@@ -113,18 +113,55 @@
       <img src="img/imag.jpg" alt="Trolltunga Norway" width="300" height="200">
     </a>
                 <a id="ize">2 æ</a>
-
-    <!-- a >$99</a> -->
     <div class="desc">fried chicken</div>
 
 
   </div>
 <button  class="btn buyFood btn-block btt" id=1> BUY</button>
 </div>
-</div>
+
+    <script id="template" type="text/x-tmpl-mustache">
+      {{#foodArray}}
+        <div class="responsive vb[] id="myDiv">
+          <div class="img">
+           <a target="_blank" >
+          <img src="{{foodpics}}" alt="Trolltunga Norway" width="300" height="200">
+          </a>
+         <a  id={{index}} class="ize">{{foodPrice}}"</a>
+        
+      <div class="desc">{{foodDesc}}</div>
+         </div>
+        <button id={{index}} class="btn buyFood btn-block btt"  >ORDER</button>
+       </div>
+
+       {{/foodArray}}
+    </script>
 
 
-<!-- <div class="clearfix"></div> -->
+<div class="clearfix"></div>
+
+  <div id="checkOut" >
+    <fieldset id='dep'>
+      <form class="recap"><span onclick="document.getElementById('log').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+      
+        <legend align="center">Complete Order</legend>
+
+          <label>Full Name</label>
+          <input type="text" name="name" placeholder="Full Name" required />
+
+          <label>Phone</label>
+          <input type="text" name="phone" placeholder="phone" required />
+
+          <label>Delivery Address </label>
+          <input type="text" name="address" placeholder="enter address"/>
+
+          <button align="center" id="btn" class="btt checkOut" >Check Out</button>
+      
+    </form>
+  </fieldset>
+  </div>
+
 </fieldset>
 
 </div>
@@ -149,38 +186,23 @@
 </fieldset>
 </div>
 
-    <script id="template" type="text/x-tmpl-mustache">
-      {{#foodArray}}
-        <div class="responsive vb[] id="myDiv">
-          <div class="img">
-           <a target="_blank" >
-          <img src="{{foodpics}}" alt="Trolltunga Norway" width="300" height="200">
-          </a>
-         <a  id={{index}} class="ize">{{foodPrice}}"</a>
-        
-      <div class="desc">{{foodDesc}}</div>
-         </div>
-        <button id={{index}} class="btn buyFood btn-block btt"  >ORDER</button>
-       </div>
-
-       {{/foodArray}}
-    </script>
 
 </body>
 </html>
 
 <script type="text/javascript" src="aedv101.js"></script>
-<script src = https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.map></script>
+ <script src = https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.map></script>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> 
   <script src="https://unpkg.com/@aeternity/aepp-sdk/dist/aepp-sdk.browser-script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.js"></script>
-  <!-- <script src="index.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.js"></script> -->
+   <script src="index.js"></script> -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
   crossorigin="anonymous"></script>
 
 <script type="text/javascript">
+
 // document.getElementById('cart').addEventListener('click',function(){
 // insDiv();
 // document.getElementById('container').style.display='block'
@@ -272,6 +294,6 @@
 
 </div>
 
-</div> --> -->
+</div> --> 
 
 
