@@ -110,8 +110,10 @@ async function contractCall(func, args, value) {
 jQuery('#myDiv').on("click",".btn", async function(event){
   $("#loader").show();
           let template = "{{foodPrice}}",
-         index = event.target.id,
-      value = foodArray[index]['foodPrice'];
+         index = event.target.id;
+         for(var i = 0 ; i < dataArray.length ; i++){
+
+      let value = foodArray[i]['foodPrice'];
       // value = this.innerHtml
         
      // value = $(this).siblings('input').val();
@@ -119,6 +121,7 @@ jQuery('#myDiv').on("click",".btn", async function(event){
   //Promise to execute execute call for the vote meme function with let values
   console.log(value)
   console.log(index)
+}
   // await contractCall('orderFood', [index], value);
   console.log("purc succses");
 
