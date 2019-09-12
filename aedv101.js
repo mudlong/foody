@@ -106,7 +106,7 @@ async function contractCall(func, args, value) {
 	
 
   for (let i = 0; i < foodArray.length; i++) {
-	
+	if(index == i){
      var value = foodArray[i]['foodPrice'];
       // value = this.innerHtml
          
@@ -114,6 +114,7 @@ async function contractCall(func, args, value) {
 
   //Promise to execute execute call for the vote meme function with let values
  console.log(value[i])
+	}
   console.log(index)
   }
   // await contractCall('orderFood', [index], value);
