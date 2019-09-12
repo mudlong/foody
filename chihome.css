@@ -743,7 +743,15 @@ div.desc {
 }
 
 #checkOut{
-	display:none;
+	display: none;
+	width: 100%;
+	position: fixed;
+	height:100% ;
+ 	top:0;
+ 	left:0;
+	z-index: 1;
+	background-color: rgba(0,1,0,0.9);
+	padding-top: 90px;
 }
 /*@media screen and (min-height: 500px){
 	li{
