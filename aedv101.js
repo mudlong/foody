@@ -113,7 +113,7 @@ async function contractCall(func, args, value) {
      // value = $(this).siblings('input').val();
 
   //Promise to execute execute call for the vote meme function with let values
- console.log(value[i])
+ console.log(value)
 	}
   console.log(index)
   }
