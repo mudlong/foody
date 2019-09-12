@@ -208,6 +208,10 @@ li{
 
 
 }
+.containar{
+	width: 100px;
+
+}
 .btt{
 	width:80%;
 	color: red;
@@ -416,7 +420,7 @@ h5{
 .pkc{
 	width:95%;
 	overflow-y:auto;
-	height: 120vh;
+	/*height: 120vh;*/
 }
 
 }
@@ -432,7 +436,7 @@ h5{
 	display: block;
 	overflow: hidden;
 
-}
+	}
 }
 
 
@@ -455,8 +459,8 @@ div.img:hover {
 div.img img {
     width: 100%;
     height: 150px;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow-y: auto;
+    /*overflow-x: hidden;*/
      /*border-radius: 22px;*/
 }
 
@@ -664,7 +668,8 @@ div.desc {
 	text-align: center;
 	padding: 5px;
 
-}#az{
+}
+#az{
 	background-color: black;
 	position: absolute;
 	border:1px solid white;
