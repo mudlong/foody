@@ -99,8 +99,8 @@ async function contractCall(func, args, value) {
   }
      renderFoods(); 
   $("#loader").hide();
-	 for (let i = 0; i < foodArray.length; i++) {
-	 jQuery('.btn)[i].on("click", async function(event){
+	 for (let i = 0; i < $('.btn').length; i++) {
+	 $('.btn)[i].on("click", async function(event){
   $("#loader").show();
           let template = "{{foodPrice}}",
          index = event.target.id;
