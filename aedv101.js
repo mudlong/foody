@@ -1,4 +1,3 @@
-
 const contractCode = `
  contract AeternityFoods =
       
@@ -8,15 +7,12 @@ const contractCode = `
           foodpics    : string, 
           foodPrice   : int, 
           foodDesc    : string }   
-
       record state = 
         { food        : map(int, foody),
           foodslength : int }
-
       entrypoint init() = 
         { food        = {},
           foodslength = 0 }
-
       entrypoint getfoody(index : int) : foody = 
         state.food[index]
         
@@ -27,11 +23,9 @@ const contractCode = `
         let foods = { conAddress = Call.caller, name = name', foodpics = foodpics', foodPrice = foodPrice', foodDesc = foodDesc'}
         let index = getFoodslength() + 1
         put(state {food[index] = foods, foodslength = index })
-
       stateful entrypoint orderFood(index : int) = 
         let foodos = getfoody(index)
         Chain.spend(foodos.conAddress, Call.value) 
-
 ` ;
 
 
@@ -95,88 +89,26 @@ async function contractCall(func, args, value) {
       foodDesc: foody.foodDesc,
       index :i,  
     })
-  
   }
+
      renderFoods(); 
   $("#loader").hide();
-	 var x = document.getElementsByClassName('btn');
-	 console.log(x.length)
-	 for (let i = 0; i < x.length; i++) {
-		 
-	 x[i].addEventListener("click", async function(event){
-  $("#loader").show();
-          let template = "{{foodPrice}}",
-         index = event.target.id;
-		 
-// 	if(index == i){
-     var value = foodArray[i]['foodPrice'];
-      // value = this.innerHtml
-	  
-     // value = $(this).siblings('input').val();
+  
+  var x = document.getElementsByClassName('btn');
+    for (let i = 0; i < x.length; i++) {
+     
+     x[i].addEventListener("click", async function(event){
+     $("#loader").show();
 
-  //Promise to execute execute call for the vote meme function with let values
- console.log(value)
-	
-  console.log(index)
-  // await contractCall('orderFood', [index], value);
+     let template = "{{foodPrice}}",
+      index = event.target.id,
+      value = foodArray[i]['foodPrice'];
+ 
+  await contractCall('orderFood', [index], value);
   console.log("purc succses");
 
-  //Hide the loading animation after async calls return a value
-  // const foundIndex = memeArray.findIndex(meme => meme.index == event.target.id);
-  //console.log(foundIndex);
-  // memeArray[foundIndex].votes += parseInt(value, 10);
-
-  // renderMemes();
   $("#loader").hide();
 });
  }
 
 })
-
-
-
-  // foodsLength = callStatic('getFoodslength', []); 
-
-// for(var i = 0 ; i < $('.buyFood').length; i++){
-
-// $('.buyFood')[i].addEventListener('click', function(event){
-//   var template =" {{foodPrice}}" ;
-//   var index = event.target.id;
-//       let vague = parseInt(Mustache.render(template,foodArray.(this)[index]);
-
-//   console.log(vague)
-// })
-// }
-
-
-//     };
-
-//        async function callStatic(func,args){
-//   const contract = await clik.getContractInstance(contractSource, {contractAddress});
-//   console.log('args', args);
-//   console.log('func', func);
-
-//   const calledGet = await contract.call(func, args, {callStatic: true}).catch(e => console.error(e));
-//   console.log('calledGet', calledGet);
-
-// } 
-          
-	// { "foodpics":"images (3).jpeg","foodPrice":"3 AE","foodDesc":"noel longs fooods"},
-	// { "foodpics":"images (13).jpeg","foodPrice":"2 AE","foodDesc":"chicken and suya"},
-	// { "foodpics":"images (11).jpeg","foodPrice":"45 AE","foodDesc":"suya fiery"}
-
-// //Create a asynchronous write call for our smart contract
-// async function contractCall(func, args, value) {
-//   const contract = await client.getContractInstance(contractSource, {contractAddress});
-//   //Make a call to write smart contract func, with aeon value input
-//   const calledSet = await contract.call(func, args, {amount: value}).catch(e => console.error(e));
-//   return calledSet;
-//   }
-
- //   const value = ($('#ize').val());
- // //index of the food to buy. 
- //   const dataIndex = event.target.id;
-
- //   alert(value);
- //   renderFoods();
- // })
