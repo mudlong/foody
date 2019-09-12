@@ -98,14 +98,8 @@ async function contractCall(func, args, value) {
     for (let i = 0; i < x.length; i++) {
      
      x[i].addEventListener("click", async function(event){
-      // document.getElementsByClassName('checkOut').style.display='block';
-   $(".checkOut").style.display='block';
-
-     $('.btt').on("click", async function(event){
-
-
+      document.getElementsByClassName('checkOut').style.display='block';
      $("#loader").show();
-
 
      let template = "{{foodPrice}}",
       index = event.target.id,
@@ -115,7 +109,6 @@ async function contractCall(func, args, value) {
   await contractCall('orderFood', [index], value);
   console.log("purc succses");
 
-    })
   $("#loader").hide();
 });
  }
