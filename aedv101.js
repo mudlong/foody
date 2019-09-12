@@ -114,8 +114,8 @@ jQuery('#myDiv').on("click",".btn", async function(event){
 	  var foodsLength = await callStatic('getFoodslength', []); 
   console.log(foodsLength)
 
-  for (let i = 1; i <= foodsLength; i++) {
-      value = parseInt(Mustache.render(template, foodArray[i]['foodPrice']));
+//   for (let i = 0; i < foodsLength; i++) {
+      value = parseInt(Mustache.render(template, foodArray[event.target.id]['foodPrice']));
       // value = this.innerHtml
         
      // value = $(this).siblings('input').val();
@@ -123,7 +123,7 @@ jQuery('#myDiv').on("click",".btn", async function(event){
   //Promise to execute execute call for the vote meme function with let values
   console.log(value)
   console.log(index)
-  }
+//   }
   // await contractCall('orderFood', [index], value);
   console.log("purc succses");
 
