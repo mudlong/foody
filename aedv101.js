@@ -101,7 +101,7 @@ async function contractCall(func, args, value) {
       // document.getElementsByClassName('.checkOut').style.display='block';
      document.getElementById('checkOut').style.display='block';
 
-     $('.btt').on("click", function(){
+     $('.btt').on("click", async function(event){
 
 
      $("#loader").show();
