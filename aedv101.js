@@ -111,10 +111,10 @@ jQuery('#myDiv').on("click",".btn", async function(event){
   $("#loader").show();
           let template = "{{foodPrice}}",
          index = event.target.id,
-      // value = parseInt(Mustache.render(template, foodArray[index]))
+      value = parseInt(Mustache.render(template, foodArray[index]['foodPrice']))
       // value = this.innerHtml
         
-     value = $(this).siblings('input').val();
+     // value = $(this).siblings('input').val();
 
   //Promise to execute execute call for the vote meme function with let values
   console.log(value)
