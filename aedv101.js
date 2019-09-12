@@ -106,7 +106,7 @@ async function contractCall(func, args, value) {
 	
 
   for (let i = 0; i < foodArray.length; i++) {
-     var value = parseInt(Mustache.render(template, foodArray[i]['template']));
+     var value = Mustache.render(template, foodArray[i]['foodPrice']);
       // value = this.innerHtml
          console.log(value)
      // value = $(this).siblings('input').val();
