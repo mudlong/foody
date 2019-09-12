@@ -115,7 +115,7 @@ async function contractCall(func, args, value) {
   //Promise to execute execute call for the vote meme function with let values
  
   console.log(index)
-  }console.log(value)
+  }console.log(value[index])
   // await contractCall('orderFood', [index], value);
   console.log("purc succses");
 
