@@ -122,7 +122,6 @@ async function contractCall(func, args, value) {
   console.log(index)
   // await contractCall('orderFood', [index], value);
   console.log("purc succses");
-	 }
 
   //Hide the loading animation after async calls return a value
   // const foundIndex = memeArray.findIndex(meme => meme.index == event.target.id);
