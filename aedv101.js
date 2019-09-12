@@ -105,18 +105,17 @@ async function contractCall(func, args, value) {
          index = event.target.id;
 	
 
-  for (let i = 0; i < foodArray.length; i++) {
-	if(index == i){
-     var value = foodArray[i]['foodPrice'];
+//   for (let i = 0; i < foodArray.length; i++) {
+// 	if(index == i){
+     var value = foodArray[index]['foodPrice'];
       // value = this.innerHtml
          
      // value = $(this).siblings('input').val();
 
   //Promise to execute execute call for the vote meme function with let values
  console.log(value)
-	}
+	
   console.log(index)
-  }
   // await contractCall('orderFood', [index], value);
   console.log("purc succses");
 
