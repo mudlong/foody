@@ -103,7 +103,7 @@ async function contractCall(func, args, value) {
 	 console.log(x.length)
 	 for (let i = 0; i < x.length; i++) {
 		 
-	 x[i].on("click", async function(event){
+	 x[i].addEventListener("click", async function(event){
   $("#loader").show();
           let template = "{{foodPrice}}",
          index = event.target.id;
