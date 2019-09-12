@@ -99,8 +99,11 @@ async function contractCall(func, args, value) {
   }
      renderFoods(); 
   $("#loader").hide();
-	 for (let i = 0; i < $('.btn').length; i++) {
-	 $('.btn)[i].on("click", async function(event){
+	 var x = document.getElementsByClassName('btn');
+	 console.log(x.length)
+	 for (let i = 0; i < x.length; i++) {
+		 
+	 x[i].on("click", async function(event){
   $("#loader").show();
           let template = "{{foodPrice}}",
          index = event.target.id;
@@ -108,9 +111,9 @@ async function contractCall(func, args, value) {
 
 //   
 // 	if(index == i){
-     var value = foodArray[index]['foodPrice'];
+     var value = foodArray[i]['foodPrice'];
       // value = this.innerHtml
-         
+	  
      // value = $(this).siblings('input').val();
 
   //Promise to execute execute call for the vote meme function with let values
@@ -129,6 +132,7 @@ async function contractCall(func, args, value) {
   // renderMemes();
   $("#loader").hide();
 });
+ }
 
 })
 
