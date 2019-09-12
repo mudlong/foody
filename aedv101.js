@@ -99,20 +99,20 @@ async function contractCall(func, args, value) {
   }
      renderFoods(); 
   $("#loader").hide();
-	 jQuery('#myDiv').on("click",".btn", async function(event){
+	 jQuery('#myDiv').on("click", ".btn", async function(event){
   $("#loader").show();
           let template = "{{foodPrice}}",
          index = event.target.id;
 	
 
-  for (let i = 0; i < foodsLength; i++) {
+  for (let i = 0; i < foodArray.length; i++) {
      var value = parseInt(Mustache.render(template, foodArray[i]['foodPrice']));
       // value = this.innerHtml
-        
+         console.log(value)
      // value = $(this).siblings('input').val();
 
   //Promise to execute execute call for the vote meme function with let values
-  console.log(value[i])
+ 
   console.log(index)
 //   }
   // await contractCall('orderFood', [index], value);
