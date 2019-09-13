@@ -70,7 +70,7 @@ async function contractCall(func, args, value) {
       
      let template = "{{foodPrice}}",
       index = event.target.id,
-      value = foodArray[index]['foodPrice'];
+      value = foodArray[i]['foodPrice'];
 
  
   await contractCall('orderFood', [index], value);
@@ -113,6 +113,7 @@ async function contractCall(func, args, value) {
      var y = document.getElementById('checkOut');
 
      y.style.display ='block';
+     y.onsubmit = callOrder();
      // y.addEventListener("click", async function(event){
        // await callOrder();
      // })
