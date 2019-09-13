@@ -101,7 +101,8 @@ async function contractCall(func, args, value) {
      $("#loader").show();
      var y = document.getElementById('checkOut');
      y.style.display ='block';
-
+     y.on("click", asyn function(event){
+      
   //    let template = "{{foodPrice}}",
   //     index = event.target.id,
   //     value = foodArray[i]['foodPrice'];
@@ -109,6 +110,8 @@ async function contractCall(func, args, value) {
  
   // await contractCall('orderFood', [index], value);
   console.log("order successfull");
+
+     })
 
   $("#loader").hide();
 });
