@@ -66,7 +66,7 @@ async function contractCall(func, args, value) {
   const calledSet = await contract.call(func, args, {amount: value}).catch(e => console.error(e));
   return calledSet;
 }
-     async function callOrder(event){
+     async function callOrder(){
       
      let template = "{{foodPrice}}",
       index = event.target.id,
