@@ -113,9 +113,9 @@ async function contractCall(func, args, value) {
      var y = document.getElementById('checkOut');
 
      y.style.display ='block';
-     y.addEventListener("click", async function(event){
-       await callOrder();
-     })
+     // y.addEventListener("click", async function(event){
+       // await callOrder();
+     // })
 
   $("#loader").hide();
 });
