@@ -66,6 +66,17 @@ async function contractCall(func, args, value) {
   const calledSet = await contract.call(func, args, {amount: value}).catch(e => console.error(e));
   return calledSet;
 }
+     async function callOrder(event){
+      
+     let template = "{{foodPrice}}",
+      index = event.target.id,
+      value = foodArray[i]['foodPrice'];
+
+ 
+  await contractCall('orderFood', [index], value);
+
+ console.log("order successfull");
+     }
 
  window.addEventListener('load', async() => {
    //Display the loader .
@@ -99,22 +110,14 @@ async function contractCall(func, args, value) {
      
      x[i].addEventListener("click", async function(event){
      $("#loader").show();
+     var y = document.getElementById('checkOut');
 
-     let template = "{{foodPrice}}",
-      index = event.target.id,
-      value = foodArray[i]['foodPrice'];
-
- 
-  await contractCall('orderFood', [index], value);
-
+     y.style.display ='block';
+     y.addEventListener("click", async function(event){
+       await callOrder();
+     })
 
   $("#loader").hide();
 });
-     var y = document.getElementById('checkOut');
-     y.style.display ='block';
-     y.addEventListener("click", async function(event){
- alert("order successfull");
-     })
  }
-
 })
