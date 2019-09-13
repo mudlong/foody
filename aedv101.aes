@@ -1,0 +1,28 @@
+ contract AeternityFoods =
+      
+      record foody =
+        { conAddress  : address,
+          name      : string,
+          foodpics    : string, 
+          foodPrice   : int, 
+          foodDesc    : string }   
+      record state = 
+        { food        : map(int, foody),
+          foodslength : int }
+      entrypoint init() = 
+        { food        = {},
+          foodslength = 0 }
+      entrypoint getfoody(index : int) : foody = 
+        state.food[index]
+        
+      entrypoint getFoodslength() : int =
+        state.foodslength
+              
+      stateful entrypoint uploadFood(name' : string, foodpics' : string, foodDesc' : string, foodPrice' : int) =
+        let foods = { conAddress = Call.caller, name = name', foodpics = foodpics', foodPrice = foodPrice', foodDesc = foodDesc'}
+        let index = getFoodslength() + 1
+        put(state {food[index] = foods, foodslength = index })
+        
+      stateful entrypoint orderFood(index : int) = 
+        let foodos = getfoody(index)
+        Chain.spend(foodos.conAddress, Call.value) 
