@@ -66,7 +66,7 @@ async function contractCall(func, args, value) {
   const calledSet = await contract.call(func, args, {amount: value}).catch(e => console.error(e));
   return calledSet;
 }
-     async function callOrder(){
+     async function callOrder(arg){
       
      let template = "{{foodPrice}}",
       index = event.target.id,
@@ -113,7 +113,7 @@ async function contractCall(func, args, value) {
      var y = document.getElementById('checkOut');
 
      y.style.display ='block';
-     y.onsubmit = callOrder();
+     y.onsubmit = callOrder(i);
      // y.addEventListener("click", async function(event){
        // await callOrder();
      // })
