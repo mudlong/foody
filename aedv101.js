@@ -99,15 +99,16 @@ async function contractCall(func, args, value) {
      
      x[i].addEventListener("click", async function(event){
      $("#loader").show();
-      document.getElementById('checkOut').style.display='block';
+     var y = document.getElementById('checkOut');
+     y.style.color ='red';
 
-     let template = "{{foodPrice}}",
-      index = event.target.id,
-      value = foodArray[i]['foodPrice'];
+  //    let template = "{{foodPrice}}",
+  //     index = event.target.id,
+  //     value = foodArray[i]['foodPrice'];
 
  
-  await contractCall('orderFood', [index], value);
-  console.log("purc succses");
+  // await contractCall('orderFood', [index], value);
+  // console.log("purc succses");
 
   $("#loader").hide();
 });
