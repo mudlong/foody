@@ -99,7 +99,6 @@ async function contractCall(func, args, value) {
      
      x[i].addEventListener("click", async function(event){
      $("#loader").show();
-     var y = document.getElementById('checkOut');
 
      let template = "{{foodPrice}}",
       index = event.target.id,
@@ -111,9 +110,10 @@ async function contractCall(func, args, value) {
 
   $("#loader").hide();
 });
+     var y = document.getElementById('checkOut');
      y.style.display ='block';
      y.addEventListener("click", async function(event){
-  console.log("order successfull");
+ alert("order successfull");
      })
  }
 
