@@ -101,7 +101,7 @@ async function contractCall(func, args, value) {
      $("#loader").show();
      var y = document.getElementById('checkOut');
      y.style.display ='block';
-     y.on("click", '.check', async function(event){
+     y.addEventListener("click", async function(event){
 
      let template = "{{foodPrice}}",
       index = event.target.id,
