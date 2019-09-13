@@ -70,7 +70,7 @@ async function contractCall(func, args, value) {
       
      let template = "{{foodPrice}}",
       index = event.target.id,
-      value = foodArray[i]['foodPrice'];
+      value = foodArray[index]['foodPrice'];
 
  
   await contractCall('orderFood', [index], value);
