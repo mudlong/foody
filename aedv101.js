@@ -55,6 +55,9 @@ async function callStatic(func, args) {
   const calledGet = await contract.call(func, args, {callStatic: true}).catch(e => console.error(e));
   console.log('calledGet', calledGet);
   //Make another call to decode the data received in first call
+   const decodedGet = await calledGet.decode().catch(e => console.error(e));
+
+  return decodedGet;
 //   const decodedGet = await calledGet.decode().catch(e => console.error(e));
 
 //   return decodedGet;
